@@ -1,1 +1,8 @@
 @import "bootstrap";
+
+.btn {border-radius: 0;}
+
+.btn.outline {
+    background: none;
+    padding: 12px 22px;
+}

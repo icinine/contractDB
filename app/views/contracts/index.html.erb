@@ -34,9 +34,9 @@
         <td><%= contract.supplier %></td>
         <td><%= contract.validFrom %></td>
         <td><%= contract.validTo %></td>
-        <td><%= link_to 'Show', contract %></td>
-        <td><%= link_to 'Edit', edit_contract_path(contract) %></td>
-        <td><%= link_to 'Destroy', contract, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', contract, class: 'btn btn-mini btn-info' %></td>
+        <td><%= link_to 'Edit', edit_contract_path(contract), class: 'btn btn-mini btn-success' %></td>
+        <td><%= link_to 'Destroy', contract, method: :delete, class: 'btn btn-mini btn-danger', data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
