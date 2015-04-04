@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  ref: 1
+  region: MyString
+  uploadedBy: MyString
+  savings: 1
+  dept: MyString
+  supplier: MyString
+  validFrom: 2015-04-04 15:52:54
+  validTo: 2015-04-04 15:52:54
+
+two:
+  title: MyString
+  ref: 1
+  region: MyString
+  uploadedBy: MyString
+  savings: 1
+  dept: MyString
+  supplier: MyString
+  validFrom: 2015-04-04 15:52:54
+  validTo: 2015-04-04 15:52:54

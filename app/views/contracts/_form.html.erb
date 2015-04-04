@@ -1,0 +1,53 @@
+<%= form_for(@contract) do |f| %>
+  <% if @contract.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contract.errors.count, "error") %> prohibited this contract from being saved:</h2>
+
+      <ul>
+      <% @contract.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :ref %><br>
+    <%= f.number_field :ref %>
+  </div>
+  <div class="field">
+    <%= f.label :region %><br>
+    <%= f.text_field :region %>
+  </div>
+  <div class="field">
+    <%= f.label :uploadedBy %><br>
+    <%= f.text_field :uploadedBy %>
+  </div>
+  <div class="field">
+    <%= f.label :savings %><br>
+    <%= f.number_field :savings %>
+  </div>
+  <div class="field">
+    <%= f.label :dept %><br>
+    <%= f.text_field :dept %>
+  </div>
+  <div class="field">
+    <%= f.label :supplier %><br>
+    <%= f.text_field :supplier %>
+  </div>
+  <div class="field">
+    <%= f.label :validFrom %><br>
+    <%= f.datetime_select :validFrom %>
+  </div>
+  <div class="field">
+    <%= f.label :validTo %><br>
+    <%= f.datetime_select :validTo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
