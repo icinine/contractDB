@@ -5,6 +5,9 @@ class ContractsController < ApplicationController
   # GET /contracts.json
   def index
     @contracts = Contract.all
+    @search = ContractSearch.new(params[:search])
+    @contract = @search.scope
+    
   end
 
   # GET /contracts/1

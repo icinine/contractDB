@@ -1,6 +1,14 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+  <h1>Contracts Listing</h1>
+  <Div class="pull-right range-query"></Div>
+      <%= form_tag contracts_path, method: :get do %>
+        <%= text_field_tag 'search[date_from]', @search.date_from %>
+        <%= text_field_tag 'search[date_to]', @search.date_to %>
+      <%= submit_tag 'Search', class: 'btn search-button' %>
+    <% end %>
+</div>
 
-<h1>Listing Contracts</h1>
 <div class="media">
   <div class="media-body">
     
@@ -32,8 +40,8 @@
         <td><%= contract.savings %></td>
         <td><%= contract.dept %></td>
         <td><%= contract.supplier %></td>
-        <td><%= contract.validFrom %></td>
-        <td><%= contract.validTo %></td>
+        <td><%= contract.validFrom.strftime("%d-%m-%Y") %></td>
+        <td><%= contract.validTo.strftime("%d-%m-%Y") %></td>
         <td><%= link_to 'Show', contract, class: 'btn btn-mini btn-info' %></td>
         <td><%= link_to 'Edit', edit_contract_path(contract), class: 'btn btn-mini btn-success' %></td>
         <td><%= link_to 'Destroy', contract, method: :delete, class: 'btn btn-mini btn-danger', data: { confirm: 'Are you sure?' } %></td>
