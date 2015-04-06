@@ -3,8 +3,8 @@ class ContractSearch
   
   def initialize(params)
     params ||={}
-    @date_from = parsed_date(params[:date_from], 7.days.ago.to_date.to_s) #showing the last 7 days worth of contracts
-     @date_to = parsed_date(params[:date_to], Date.today.to_s)
+    @date_from = parsed_date(params[:date_from], 365.days.ago.to_date.to_s) #showing the last 7 days worth of contracts
+    @date_to = parsed_date(params[:date_to], Date.today.to_s)
    end
    
    def scope
@@ -13,9 +13,9 @@ class ContractSearch
    
    private
    
-   def parsed_date(validTo_string, default)
-     Date.parse(validTo_string)
+   def parsed_date(date_string, default)
+     Date.parse(date_string)
       rescue ArgumentError, TypeError
       default
-      end
+    end
 end
